@@ -1,6 +1,7 @@
 package com.kingothepig.tutorialmod;
 
 import com.kingothepig.tutorialmod.handler.ConfigHandler;
+import com.kingothepig.tutorialmod.init.ModBlocks;
 import com.kingothepig.tutorialmod.init.ModItems;
 import com.kingothepig.tutorialmod.proxy.IProxy;
 import com.kingothepig.tutorialmod.reference.ConfigRef;
@@ -28,6 +29,7 @@ public class TutorialMod {
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
 
         ModItems.init();
+        ModBlocks.init();
 
         LogHelper.info("Pre-Init Complete!");
     }

@@ -33,7 +33,9 @@ public class ItemModItem extends Item{
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister){
+        //String unlocalized = this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1);
         LogHelper.log(Level.FATAL,"Registering Texture");
-        iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+        itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+        //itemIcon = iconRegister.registerIcon(unlocalized);
     }
 }
