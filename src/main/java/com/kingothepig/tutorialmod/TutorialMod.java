@@ -3,6 +3,7 @@ package com.kingothepig.tutorialmod;
 import com.kingothepig.tutorialmod.handler.ConfigHandler;
 import com.kingothepig.tutorialmod.init.ModBlocks;
 import com.kingothepig.tutorialmod.init.ModItems;
+import com.kingothepig.tutorialmod.init.Recipes;
 import com.kingothepig.tutorialmod.proxy.IProxy;
 import com.kingothepig.tutorialmod.reference.ConfigRef;
 import com.kingothepig.tutorialmod.reference.Reference;
@@ -13,6 +14,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = ConfigRef.GUI_FACTORY_CLASS)
 public class TutorialMod {
@@ -36,11 +38,18 @@ public class TutorialMod {
 
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event){
-
+        Recipes.init();
+        LogHelper.info("Init Complete!");
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
+
+        LogHelper.info("Post Init Complete!");
+
+        for(String oreName : OreDictionary.getOreNames()){
+            LogHelper.info(oreName);
+        }
 
     }
 

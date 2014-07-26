@@ -1,3 +1,5 @@
 item.tutorialmod:mapleLeaf.name=Leaf
 
 tile.tutorialmod:flagBlock.name=Flag
+
+itemGroup.tutorialsmod=Tutorial Mod

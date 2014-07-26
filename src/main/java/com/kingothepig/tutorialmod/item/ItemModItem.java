@@ -1,5 +1,6 @@
 package com.kingothepig.tutorialmod.item;
 
+import com.kingothepig.tutorialmod.creativetab.CreativeTabMod;
 import com.kingothepig.tutorialmod.reference.Reference;
 import com.kingothepig.tutorialmod.utility.LogHelper;
 import cpw.mods.fml.relauncher.Side;
@@ -14,6 +15,7 @@ public class ItemModItem extends Item{
         super();
         this.maxStackSize = 1;
         this.setNoRepair();
+        this.setCreativeTab(CreativeTabMod.MOD_TAB);
     }
 
     @Override
