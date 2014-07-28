@@ -2,8 +2,10 @@ package com.kingothepig.tutorialmod;
 
 import com.kingothepig.tutorialmod.handler.ConfigHandler;
 import com.kingothepig.tutorialmod.init.ModBlocks;
+import com.kingothepig.tutorialmod.init.ModEntity;
 import com.kingothepig.tutorialmod.init.ModItems;
 import com.kingothepig.tutorialmod.init.Recipes;
+import com.kingothepig.tutorialmod.proxy.ClientProxy;
 import com.kingothepig.tutorialmod.proxy.IProxy;
 import com.kingothepig.tutorialmod.reference.ConfigRef;
 import com.kingothepig.tutorialmod.reference.Reference;
@@ -32,6 +34,10 @@ public class TutorialMod {
 
         ModItems.init();
         ModBlocks.init();
+
+        ModEntity.init();
+
+        ClientProxy.registerRenderThings();
 
         LogHelper.info("Pre-Init Complete!");
     }

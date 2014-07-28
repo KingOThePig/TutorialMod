@@ -4,3 +4,5 @@ tile.tutorialmod:flagBlock.name=Flag
 tile.tutorialmod:energyConverter.name=Energy Converter
 
 itemGroup.tutorialsmod=Tutorial Mod
+
+entity.mobName.name=Mod Mob
