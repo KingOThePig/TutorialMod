@@ -1,6 +1,9 @@
 package com.kingothepig.tutorialmod.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockObsidian;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -20,5 +23,9 @@ public class Recipes {
 
         //Ore Dictionary Shapeless Recipes
         //GameRegistry.addShapelessRecipe(new ShapelessOreRecipe(new ItemStack(ModBlocks.flag), new ItemStack(ModItems.mapleLeaf)));
+
+
+        //TEMP ITEM RECIPE FOR DIAMOND
+        GameRegistry.addRecipe(new ItemStack(Items.diamond), "OGO", "GEG", "OGO", 'O', new ItemStack(Blocks.obsidian), 'G', new ItemStack(Items.glowstone_dust), 'E', new ItemStack(Items.ender_pearl));
     }
 }
