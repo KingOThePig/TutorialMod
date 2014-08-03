@@ -9,7 +9,7 @@ public class EntityHelper {
         int randomId = EntityRegistry.findGlobalUniqueEntityId();
 
         EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomId);
-        EntityRegistry.registerModEntity(entityClass, entityName,randomId, TutorialMod.instance, 32, 1, true);
+        EntityRegistry.registerModEntity(entityClass, entityName,randomId, TutorialMod.instance, 64, 1, true);
 
         createEgg(randomId, solidColor, spotColor);
     }
